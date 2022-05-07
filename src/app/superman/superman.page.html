@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title class="ion-text-center">Man of Steel: Superman</ion-title>
+    <ion-back-button></ion-back-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <h4>Superman's Rogue Gallery</h4>
+  <!--A searchbar that allows user to search for every villian in superman iconic villian-->
+  <ion-searchbar placeholder="Try Lex" [{ngModel}]="searchVillian" showCancelButton="focus" animated></ion-searchbar>
+
+  <ion-list>
+    <ion-item *ngFor="let villian of villians | filter:searchVillian">
+      <ion-label>{{villian.name}}</ion-label>
+      <ion-label>{{villian.species}}</ion-label>
+      <ion-label>{{villian.base}}</ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

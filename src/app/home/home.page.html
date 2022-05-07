@@ -1,0 +1,111 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title class="ion-text-center"> DC Superheroes </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <!--navigate here-->
+  <ion-list>
+    <h6>pages</h6>
+    <ion-item>
+      <ion-text [routerLink]="['/batman']" routerDirection="forward"> Batman {{batmanAlias}}</ion-text>
+      <!--Set Character nickname-->
+    </ion-item>
+
+    <ion-item>
+      <ion-text [routerLink]="['/superman']" routerDirection="forward"> Superman</ion-text>
+    </ion-item>
+
+    <ion-item>
+      <ion-text [routerLink]="['/wonderwomen']" routerDirection="forward">Wonder Woman</ion-text>
+    </ion-item>
+
+    <ion-item>
+      <ion-text [routerLink]="['/joker']" routerDirection="forward">Joker</ion-text>
+    </ion-item>
+  </ion-list>
+
+
+
+  <h3>About</h3>
+  <p>This is a show case of DC Character in the mainstream</p>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>All DC heroes</ion-card-subtitle>
+      <ion-card-title>Dark Comics</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <img src="https://bizznerd.com/wp-content/uploads/2021/11/DC_Universe_by_Gary_Frank.jpg">
+      <b>DC Universe</b> is a fictional shared universe where the Superheroes exist
+    </ion-card-content>
+  </ion-card>
+
+  <!--  Best Comics -->
+  <ion-accordion-group>
+    <ion-accordion value="batmanComics">
+      <ion-item slot="header">
+        <ion-label>Batman Comics</ion-label>
+      </ion-item>
+
+      <!--batman comic-->
+      <ion-list slot="content">
+        <ion-item>
+          <ion-label>Batman:Hush</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Batman:The Killing Joke</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Batman:Year One</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-accordion>
+
+    <!--superman comic-->
+    <ion-accordion value="superComics">
+      <ion-item slot="header">
+        <ion-label>Superman Comics</ion-label>
+      </ion-item>
+      <ion-list slot="content">
+        <ion-item>
+          <ion-label>Death of Superman</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Man of Steel</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Kingdom Come</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-accordion>
+
+    <!--wonder woman comic-->
+    <ion-accordion value="wonderwomenComics">
+      <ion-item slot="header">
+        <ion-label>Wonder Woman Comics</ion-label>
+      </ion-item>
+      <ion-list slot="content">
+        <ion-item>
+          <ion-label>The Hiketeia</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Future State</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Nubia & the Amazon</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-accordion>
+  </ion-accordion-group>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="primary">
+    <ion-title class="ion-text-center">
+      @copyright 2022
+    </ion-title>
+  </ion-toolbar>
+</ion-footer>

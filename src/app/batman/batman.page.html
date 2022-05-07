@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title class="ion-text-center">Dark Knight: Batman</ion-title>
+    <ion-back-button></ion-back-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-radio-group [(ngModel)]="batmanAlias">
+      <ion-list-header>
+        <ion-label>Batman Nickname {{batmanAlias}}</ion-label>
+      </ion-list-header>
+  
+      <ion-item>
+        <ion-label>Dark Knight</ion-label>
+        <ion-radio slot="start" value="is the Dark Knight"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Cape Crusader</ion-label>
+        <ion-radio slot="start" value="is the Cape Crusader"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Man Hunter</ion-label>
+        <ion-radio slot="start" value="is the Manhunter"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Detective</ion-label>
+        <ion-radio slot="start" value="is the Detective"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Vengeance</ion-label>
+        <ion-radio slot="start" value="is Vengeance"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+  </ion-list>
+  <ion-button (click)="SaveNickname()">Save</ion-button>
+<!--Ionic plugin-->
+<br>
+<br>
+<h3>Bat Lights</h3>
+  <ion-button (click)="Flashlights()">Flashlights</ion-button>
+</ion-content>
+
+
